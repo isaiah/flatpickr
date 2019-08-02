@@ -289,12 +289,20 @@
       path
         fill alpha($monthForeground, 0.5)
 
+  span.label
+    opacity 1
+    line-height: inherit
+    border: unset
+    z-index: -1
+    top: 3px
+
   &:hover
     background: alpha($invertedBg, 0.05)
 
     span
       opacity 1
-
+    span.label
+      opacity 0
 
 .flatpickr-current-month
   font-size 135%

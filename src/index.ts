@@ -997,7 +997,11 @@ function FlatpickrInstance(
       monthElement = self.monthsDropdownContainer;
     }
 
-    const yearInput = createNumberInput("cur-year", { tabindex: "-1" });
+    const yearInput = createNumberInput(
+      "cur-year",
+      { tabindex: "-1" },
+      self.l10n.year
+    );
 
     const yearElement = yearInput.getElementsByTagName(
       "input"
@@ -1026,8 +1030,8 @@ function FlatpickrInstance(
       "div",
       "flatpickr-current-month"
     );
-    currentMonth.appendChild(monthElement);
     currentMonth.appendChild(yearInput);
+    currentMonth.appendChild(monthElement);
 
     monthNavFragment.appendChild(currentMonth);
     container.appendChild(monthNavFragment);

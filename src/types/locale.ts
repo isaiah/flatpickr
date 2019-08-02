@@ -57,6 +57,7 @@ export type Locale = {
   yearAriaLabel: string;
   hourAriaLabel: string;
   minuteAriaLabel: string;
+  year?: string;
   time_24hr: boolean;
 };
 
@@ -68,6 +69,7 @@ export type CustomLocale = {
   weekAbbreviation?: Locale["weekAbbreviation"];
   toggleTitle?: Locale["toggleTitle"];
   scrollTitle?: Locale["scrollTitle"];
+  year?: string;
   yearAriaLabel?: string;
   hourAriaLabel?: string;
   minuteAriaLabel?: string;

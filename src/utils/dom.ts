@@ -40,13 +40,15 @@ export function findParent(
 
 export function createNumberInput(
   inputClassName: string,
-  opts?: Record<string, any>
+  opts?: Record<string, any>,
+  labelText?: string
 ) {
   const wrapper = createElement<HTMLDivElement>("div", "numInputWrapper"),
     numInput = createElement<HTMLInputElement>(
       "input",
       "numInput " + inputClassName
     ),
+    label = createElement<HTMLSpanElement>("span", "label", labelText),
     arrowUp = createElement<HTMLSpanElement>("span", "arrowUp"),
     arrowDown = createElement<HTMLSpanElement>("span", "arrowDown");
 
@@ -63,6 +65,7 @@ export function createNumberInput(
   wrapper.appendChild(numInput);
   wrapper.appendChild(arrowUp);
   wrapper.appendChild(arrowDown);
+  wrapper.appendChild(label);
 
   return wrapper;
 }
